@@ -401,8 +401,10 @@ header p {
   }
 
   .card {
-    width: 90%;
+   min-width: 300px;
     margin-bottom: 2rem;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
   }
 }
 
@@ -590,10 +592,15 @@ header p {
 /* Responsive for smaller screens */
 @media (max-width: 768px) {
   .contact-inner {
-    flex-direction: column;
+    display: block;
   }
 
-  .contact-form .form-row {
+  .contact-form {
+    margin-top: 40px;
+    padding: 0px !important;
+  }
+
+  /* .contact-form .form-row {
     flex-direction: column;
   }
 
@@ -603,7 +610,7 @@ header p {
 
   .contact-form button {
     align-self: center;
-  }
+  } */
 }
 
 /* Dropdown fallback for mobile */
@@ -802,6 +809,11 @@ header p {
   .social-icons {
     justify-content: center;
   }
+
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Accent color bar per card */
@@ -854,7 +866,7 @@ dl dd::before {
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%; /* full width, fixes 93% issue */
+  width: auto; /* full width, fixes 93% issue */
   padding: 0.9rem 1rem;
   border: 1px solid var(--card-border);
   border-radius: 6px;
@@ -896,13 +908,19 @@ dl dd::before {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+
+  form {
+    display: flex;
+    margin: 0 auto;
+  }
+
   .contact-form .form-row {
     flex-direction: column;
     gap: 1rem;
   }
 
   .contact-form .form-row input {
-    flex: 1 1 100%;
+    flex: 1 1 auto;
   }
 
   .contact-form button {
