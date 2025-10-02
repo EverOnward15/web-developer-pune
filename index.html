@@ -51,6 +51,15 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
 
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute("6LdvMtwrAAAAAJE9mowhhFskC55GlPw1slM-zNAI", { action: "submit" }).then(function (token) {
+                document.getElementById("g-recaptcha-response").value = token;
+            });
+        });
+    </script>
+
+
     <!-- Schema Markup for Local SEO -->
 
     <script type="application/ld+json">
@@ -256,7 +265,6 @@
                         </a>
                     </p>
                 </div>
-
                 <form class="contact-form" action="https://formspree.io/f/mrblappd" method="post">
                     <div class="form-row">
                         <input type="text" name="name" placeholder="Your Name" required />
@@ -264,10 +272,12 @@
                     </div>
                     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
-                    <!-- reCAPTCHA -->
-                    <div class="g-recaptcha" data-sitekey="6LdvMtwrAAAAAJE9mowhhFskC55GlPw1slM-zNAI"></div>
+                    <!-- Hidden input for reCAPTCHA token -->
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+
                     <button type="submit" class="btn-secondary">Send Message</button>
                 </form>
+
             </div>
         </section>
 
@@ -338,7 +348,7 @@
             <p>© 2025 Prathamesh Satish Bhoite. All rights reserved.</p>
         </div>
     </footer>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdvMtwrAAAAAJE9mowhhFskC55GlPw1slM-zNAI"></script>
 
 </body>
 
