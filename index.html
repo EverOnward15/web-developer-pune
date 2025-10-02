@@ -1,39 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!DOCTYPE html>
+
+<html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta -->
+
+    <title>Website Development in Pune - Affordable Freelance Web Developer</title>
     <meta name="description"
-        content="Affordable website packages in Pune that help you grow online. SEO, eCommerce, bookings, leads, and professional presence — done-for-you by a freelance developer." />
-    <meta name="keywords"
-        content="Website Packages Pune, Affordable Website Pune, SEO Website Developer, eCommerce Website Pune, Booking Website India, Lead Generation Web Developer" />
+        content="Get affordable website development in Pune with SEO, eCommerce, booking, and lead generation solutions. Work directly with a freelance web developer to grow your business online." />
     <meta name="author" content="Prathamesh Bhoite" />
+    <meta name="geo.region" content="IN-MH" />
+    <meta name="geo.placename" content="Pune, India" />
+
+    <!-- Open Graph / Facebook -->
+
+    <meta property="og:title" content="Website Development in Pune - Affordable Freelance Web Developer">
+    <meta property="og:description"
+        content="Get affordable website development in Pune with SEO, eCommerce, booking, and lead generation solutions. Work directly with a freelance web developer to grow your business online.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="https://yourdomain.com/assets/banner.png">
+
+    <!-- Twitter -->
+<!-- 
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Website Development in Pune - Affordable Freelance Web Developer">
+    <meta name="twitter:description"
+        content="Affordable website development in Pune with SEO, eCommerce, booking, and lead generation solutions.">
+    <meta name="twitter:image" content="https://yourdomain.com/preview.jpg"> -->
+
+    <!-- Fonts & Styles -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> <!-- External CSS if needed -->
-    <title>Affordable Website Development in Pune | Freelance Web Developer</title>
-    <style>
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="/script.js"></script>
+
+    <!-- Schema Markup for Local SEO -->
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Prathamesh Bhoite",
+    "jobTitle": "Freelance Web Developer",
+    "url": "https://yourdomain.com",
+    "address": {
+      "@type": "95B Prabhat Road, 411004",
+      "addressLocality": "Pune",
+      "addressRegion": "MH",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/leiste15/"
+    ]
+  }
+  </script>
+
 </head>
+
+
 
 <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="logo"><a href="#" aria-label="Homepage"><img src="/assets/logo.webp" width="120px"
-                    style="padding:0px 20px;" alt="Branding logo"></a></div>
+        <div class="logo">
+            <a href="/" aria-label="Homepage">
+                <img src="/assets/logo.webp" width="120px" style="padding:0px 20px;" alt="Branding logo">
+            </a>
+        </div>
+
         <div class="nav-center">
             <ul id="nav-links">
                 <li><a href="#why">Why Work with Me?</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li class="mobile-only"><a href="/blog">Blog</a></li>
             </ul>
         </div>
+
+        <div class="nav-right desktop-only">
+            <a href="/blog" class="blog-link">Blog</a>
+        </div>
+
         <div class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false"
             aria-controls="nav-links">
             <span></span><span></span><span></span>
         </div>
     </nav>
+
 
     <header class="hero">
         <div class="hero-text">
@@ -46,15 +110,13 @@
         </div>
     </header>
 
-
     <main class="container">
         <section aria-label="Package filter">
             <div class="selector" id="tabs">
-                <button data-package="seo">Show Up on Google</button>
+                <button data-package="seo">Get on Google</button>
                 <button data-package="shop">Sell Online</button>
                 <button data-package="book">Bookings</button>
                 <button data-package="professional">Professional Look</button>
-                <button data-package="leads">Get Leads</button>
                 <button data-package="all" class="active"><img src="assets/increase.png">&nbsp;&nbsp;All Goals</button>
             </div>
 
@@ -62,38 +124,51 @@
                 <label for="dropdown" class="visually-hidden">Select a package</label>
                 <select id="dropdown">
                     <option value="all">All Goals</option>
-                    <option value="seo">Show Up on Google</option>
+                    <option value="professional">Professional Look</option>
+                    <option value="seo">Get on Google</option>
                     <option value="shop">Sell Online</option>
                     <option value="book">Bookings</option>
-                    <option value="professional">Professional Look</option>
-                    <option value="leads">Get Leads</option>
+
                 </select>
             </div>
         </section>
+
         <section aria-labelledby="carousel-heading" class="carousel-section">
             <h2 id="carousel-heading" class="visually-hidden">Web Design Packages</h2>
-
             <div class="carousel" id="carousel" role="list">
-                <article class="card" data-package="seo" role="listitem">
-                    <h3>“I Want to Show Up on Google”</h3>
+                <article class="card" data-package="professional" role="listitem">
+                    <h3>“I Want to Look Professional”</h3>
                     <ul>
-                        <li>Basic on-page SEO</li>
-                        <li>Google Business Profile Setup</li>
-                        <li>Blog Template</li>
+                        <li>Up to 5-pages business site</li>
+                        <li>Mobile-friendly</li>
+                        <li>Google Maps + Contact Form</li>
                     </ul>
-                    <div class="price">₹25,000 <span class="timeline">· 2 Weeks</span></div>
-                    <a href="#">View Example</a>
+                    <!-- <div class="price">₹20,000 <span class="timeline">· 7 Days</span></div> -->
+                    <div class="price"><span class="timeline">· 7 Days</span></div>
+                    <a href="https://universalreceivable.com/">View Example</a>
+                </article>
+                <article class="card" data-package="seo" role="listitem">
+                    <h3>“Get on Google”</h3>
+                    <ul>
+                        <li>On-page SEO</li>
+                        <li>Template-based SEO Content</li>
+                        <li>Optional Google Business Profile Setup</li>
+                    </ul>
+                    <!-- <div class="price">₹25,000 <span class="timeline">· 2 Weeks</span></div> -->
+                    <div class="price"><span class="timeline">· 3 Weeks</span></div>
+                    <a href="http://1tamilmv.fan/">View Example</a>
                 </article>
 
                 <article class="card" data-package="shop" role="listitem">
                     <h3>“I Want to Sell Online”</h3>
                     <ul>
-                        <li>Shopify/WooCommerce setup</li>
-                        <li>10 products, Payment gateway</li>
+                        <li>WooCommerce/Shopify setup</li>
+                        <li>10 product categories, Payment gateway</li>
                         <li>Mobile-ready</li>
                     </ul>
-                    <div class="price">₹50,000 <span class="timeline">· 3 Weeks</span></div>
-                    <a href="#">View Example</a>
+                    <!-- <div class="price">₹50,000 <span class="timeline">· 3 Weeks</span></div> -->
+                    <div class="price"><span class="timeline">· 3 Weeks</span></div>
+                    <a href="https://furrypets.great-site.net/">View Example</a>
                 </article>
 
                 <article class="card" data-package="book" role="listitem">
@@ -103,22 +178,11 @@
                         <li>Confirmation emails</li>
                         <li>WhatsApp integration</li>
                     </ul>
-                    <div class="price">₹30,000 <span class="timeline">· 10 Days</span></div>
-                    <a href="#">View Example</a>
+                    <!-- <div class="price">₹30,000 <span class="timeline">· 10 Days</span></div> -->
+                    <div class="price"><span class="timeline">· 10 Days</span></div>
+                    <a href="https://littlebigdeeds.com/">View Example</a>
                 </article>
-
-                <article class="card" data-package="professional" role="listitem">
-                    <h3>“I Want to Look Professional”</h3>
-                    <ul>
-                        <li>5-page business site</li>
-                        <li>Mobile-friendly</li>
-                        <li>Google Maps + Contact Form</li>
-                    </ul>
-                    <div class="price">₹20,000 <span class="timeline">· 7 Days</span></div>
-                    <a href="#">View Example</a>
-                </article>
-
-                <article class="card" data-package="leads" role="listitem">
+                <!-- <article class="card" data-package="leads" role="listitem">
                     <h3>“I Want More Leads”</h3>
                     <ul>
                         <li>Landing page</li>
@@ -126,8 +190,9 @@
                         <li>Basic analytics setup</li>
                     </ul>
                     <div class="price">₹25,000 <span class="timeline">· 10 Days</span></div>
+                    <div class="price">₹25,000 <span class="timeline">· 10 Days</span></div>
                     <a href="#">View Example</a>
-                </article>
+                </article> -->
             </div>
         </section>
 
@@ -220,19 +285,20 @@
             <!-- SEO Links -->
             <div class="footer-links">
                 <h4>Quick Links</h4>
-                <a href="#">Best Web Developer Pune</a>
-                <a href="#">Local Website Developer</a>
-                <a href="#">Freelance Web Developer India</a>
-                <a href="#">Affordable WordPress Developer</a>
+                <a href="/best-web-developer-in-pune.html">Best Web Developer in Pune</a>
+                <a href="/local-website-developer-in-pune.html">Local Website Developer in Pune</a>
+                <a href="/freelance-web-developer-india">Freelance Web Developer India</a>
+                <a href="/affordable-wordpress-developer-pune">Affordable WordPress Developer Pune</a>
             </div>
+
 
             <!-- More Helpful Pages -->
             <div class="footer-links">
                 <h4>More Services</h4>
-                <a href="#">React Developer Pune</a>
-                <a href="#">Speed Optimization India</a>
-                <a href="#">Freelance Front-End Dev</a>
-                <a href="#">Pixel-Perfect Conversion</a>
+                <a href="/react-developer-pune.html">React Developer Pune</a>
+                <a href="/speed-optimization-india.html">Speed Optimization India</a>
+                <a href="/freelance-front-end-dev.html">Freelance Front-End Dev</a>
+                <a href="/pixel-perfect-conversion.html">Pixel-Perfect Conversion</a>
             </div>
 
             <!-- Socials -->
@@ -241,22 +307,20 @@
                 <div class="social-icons">
                     <a href="https://github.com/EverOnward15" target="_blank" rel="noopener noreferrer"
                         aria-label="GitHub">
-                        <img src="assets/images/icons8-github.svg" alt="GitHub Icon" loading="lazy" width="32"
-                            height="32" />
+                        <img src="assets/icons8-github.svg" alt="GitHub Icon" loading="lazy" width="32" height="32" />
                     </a>
                     <a href="https://www.upwork.com/freelancers/~01f399fca4989084d0" target="_blank"
                         rel="noopener noreferrer" aria-label="Upwork">
-                        <img src="assets/images/icons8-upwork.svg" alt="Upwork Icon" loading="lazy" width="32"
-                            height="32" />
+                        <img src="./assets/icons8-upwork.svg" alt="Upwork Icon" loading="lazy" width="32" height="32" />
                     </a>
                     <a href="https://www.linkedin.com/in/leiste15/" target="_blank" rel="noopener noreferrer"
                         aria-label="LinkedIn">
-                        <img src="assets/images/icons8-linkedin.svg" alt="LinkedIn Icon" loading="lazy" width="32"
+                        <img src="assets/icons8-linkedin.svg" alt="LinkedIn Icon" loading="lazy" width="32"
                             height="32" />
                     </a>
                     <a href="https://www.facebook.com/leiste15" target="_blank" rel="noopener noreferrer"
                         aria-label="Facebook">
-                        <img src="assets/images/icons8-facebook.svg" alt="Facebook Icon" loading="lazy" width="32"
+                        <img src="assets/icons8-facebook.svg" alt="Facebook Icon" loading="lazy" width="32"
                             height="32" />
                     </a>
                 </div>
@@ -267,51 +331,6 @@
             <p>© 2025 Prathamesh Satish Bhoite. All rights reserved.</p>
         </div>
     </footer>
-
-
-
-    <script>
-
-
-        const buttons = document.querySelectorAll('#tabs button');
-        const dropdown = document.getElementById('dropdown');
-        const cards = document.querySelectorAll('.card');
-
-        function filterCards(value) {
-            cards.forEach(card => {
-                if (value === 'all' || card.dataset.package === value) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                buttons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const value = btn.dataset.package;
-                dropdown.value = value;
-                filterCards(value);
-            });
-        });
-
-        dropdown.addEventListener('change', e => {
-            const value = e.target.value;
-            filterCards(value);
-            buttons.forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.package === value);
-            });
-        });
-
-        const toggle = document.getElementById('menu-toggle');
-        const navLinks = document.getElementById('nav-links');
-
-        toggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
 </body>
 
 </html>
