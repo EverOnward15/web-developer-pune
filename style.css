@@ -105,12 +105,12 @@ body {
 }
 
 .blog-link {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .blog-link:hover {
-    color: var(--accent);
-    filter: brightness(0.9);
+  color: var(--accent);
+  filter: brightness(0.9);
 }
 
 @media (max-width: 768px) {
@@ -606,6 +606,111 @@ header p {
   }
 }
 
+/* Dropdown fallback for mobile */
+.dropdown {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.dropdown select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Carousel section base */
+.carousel-section {
+  padding: 1rem;
+  background-color: var(--bg-light);
+}
+
+/* Horizontal scroll carousel */
+.carousel {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+  scroll-padding-inline: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* Card styles */
+.card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #4caf50;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.1rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .selector {
+    display: none;
+  }
+
+  .dropdown {
+    display: block;
+  }
+
+  .carousel {
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .card {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+
+  .card ul {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+  }
+
+  .card .price {
+    font-size: 1rem;
+  }
+}
+
 .site-footer {
   background: var(--primary);
   color: var(--light);
@@ -716,10 +821,92 @@ header p {
   border-top-color: #9c27b0;
 } */
 
-
 dl dd::before {
   content: ">";
   margin-right: 5px;
   color: var(--primary); /* optional: match your theme */
   font-weight: bold;
+}
+
+/* Contact Form Fixes */
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form .form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-form .form-row input {
+  flex: 1 1 48%;
+  min-width: 100px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* full width, fixes 93% issue */
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 138, 139, 0.15);
+  outline: none;
+}
+
+.contact-form button {
+  align-self: flex-start;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+  background-color: #3d7273;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-form .form-row input {
+    flex: 1 1 100%;
+  }
+
+  .contact-form button {
+    align-self: center;
+    width: 100%; /* optional: make button full width on mobile */
+  }
 }
