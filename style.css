@@ -591,8 +591,13 @@ header p {
 
 /* Responsive for smaller screens */
 @media (max-width: 768px) {
+  .contact {
+    padding: 5px !important;
+  }
+
   .contact-inner {
     display: block;
+    padding: 5px !important;
   }
 
   .contact-form {
